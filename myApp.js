@@ -1,5 +1,14 @@
 require('dotenv').config();
+var express = require('express'); 
+var app = express();
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const port = 3000;
 
+
+app.get('/', (req,res) => {
+  res.send('ok');
+})
 
 let Person;
 
@@ -50,7 +59,7 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
-
+app.listen(port, ()=>console.log("listening on port" + port));
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
  */
