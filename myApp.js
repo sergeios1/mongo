@@ -17,7 +17,7 @@ const personSchema = new mongoose.Schema({
 let Person = mongoose.model('Person', personSchema);
 
 var createAndSavePerson = function(done){
-  let cool = new Person("hi",1,['yo','sasd']);
+  let cool = new Person({name: "hi",age: 1,favoriteFoods: ['yo','sasd']});
 
   cool.save((error,data)=>{
     if(error){
