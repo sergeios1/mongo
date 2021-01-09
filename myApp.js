@@ -14,18 +14,14 @@ const personSchema = new mongoose.Schema({
 
 
 
-let Person = mongoose.model('Person', personSchema);
+var Person = mongoose.model('Person', personSchema);
 
 var createAndSavePerson = function(done){
   let cool = new Person({name: "hi",age: 1,favoriteFoods: ['yo','sasd']});
 
   cool.save((error,data)=>{
-    if(error){
-      console.log(error);
-    } 
-    else{
-      done(null,data);
-    }
+    if(error) return console.error(error);
+    done(null,data);
   })
 }
 
