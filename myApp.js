@@ -10,21 +10,20 @@ const personSchema = new mongoose.Schema({
   name: String,
   age: Number,
   favoriteFoods: [String]
-})
+});
 
 
 
 var Person = mongoose.model('Person', personSchema);
 
-var createAndSavePerson = function(done){
-  let cool = new Person({name: "hi",age: 1,favoriteFoods: ['yo','sasd']});
+var createAndSavePerson = function(done) {
+  var janeFonda = new Person({name: "Jane Fonda", age: 84, favoriteFoods: ["vodka", "air"]});
 
-  cool.save((error,data)=>{
-    if(error) return console.error(error);
-    done(null,data);
-  })
-}
-
+  janeFonda.save(function(err, data) {
+    if (err) return console.error(err);
+    done(null, data)
+  });
+};
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
