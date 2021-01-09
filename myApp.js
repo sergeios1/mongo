@@ -54,8 +54,7 @@ const findPersonById = (personId, done) => {
     done(null, data);
   })
 };
-
-/*const findEditThenSave = (personId, done) => {
+const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
   Person.findById({_id: personId}, (err,person) => {
     if(err) return console.log(err);
@@ -68,8 +67,7 @@ const findPersonById = (personId, done) => {
     });
     
   })
-  done(null /*, data);
-};*/
+};
 
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
