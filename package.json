@@ -15,7 +15,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/freeCodeCamp/boilerplate-mongomongoose.git"
+        "url": "https://github.com/sergeios1/mongo.git"
     },
     "keywords": [
         "node",
