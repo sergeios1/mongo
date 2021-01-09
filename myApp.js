@@ -3,16 +3,19 @@ var express = require('express');
 var app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+/** 1) Install & Set up mongoose */
 
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URI);
 
-const personSchema = new mongoose.Schema({
+/** 2) Create a 'Person' Model */
+var personSchema = new mongoose.Schema({
   name: String,
   age: Number,
   favoriteFoods: [String]
 });
 
-
+/** 3) Create and Save a Person */
 var Person = mongoose.model('Person', personSchema);
 
 var createAndSavePerson = function(done) {
@@ -23,7 +26,6 @@ var createAndSavePerson = function(done) {
     done(null, data)
   });
 };
-
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
