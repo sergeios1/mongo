@@ -16,7 +16,6 @@ var personSchema = new mongoose.Schema({
 });
 
 /** 3) Create and Save a Person */
-var Person = mongoose.model('Person', personSchema);
 
 
 
