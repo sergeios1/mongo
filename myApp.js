@@ -1,9 +1,7 @@
 require('dotenv').config();
-let mongoose = require('mongoose');
 
 
-
-
+let Person;
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
@@ -52,6 +50,7 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
+
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
  */
