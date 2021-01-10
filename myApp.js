@@ -69,8 +69,6 @@ const findEditThenSave = (personId, done) => {
   })
 };
 
-
-
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
 
